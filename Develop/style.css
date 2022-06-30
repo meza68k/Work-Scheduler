@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-color: grey;
+  background-color: whitesmoke;
 }
 
 textarea{
@@ -100,4 +100,9 @@ input{
   flex: 2;
   background: transparent;
   text-align: left;
+}
+
+footer{
+  border-top: 3px solid black;
+  margin-top: 15px;
 }
