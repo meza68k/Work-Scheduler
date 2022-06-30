@@ -79,6 +79,15 @@ textarea{
   margin-bottom: 16px;
   width: 10%;
 }
+.clearBtn{
+  position: absolute;
+  margin-left: 1026px;
+  width: 113px;
+  border-top-right-radius: 15px;
+  border-left: 1px solid black;
+  
+
+}
 
 .saveBtn i:hover {
   font-size: 20px;
