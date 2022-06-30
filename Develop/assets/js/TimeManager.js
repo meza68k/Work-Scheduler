@@ -50,6 +50,133 @@ function displayDate(date){
     }
 };
 
+//setting variables for each slot
+var nineAm = document.getElementById('9am');
+var tenAm = document.getElementById('10am');
+var elevenAm = document.getElementById('11am');
+var twelvePm = document.getElementById('12pm');
+var onePm = document.getElementById('1pm');
+var twoPm = document.getElementById('2pm');
+var threePm = document.getElementById('3pm');
+var fourPm = document.getElementById('4pm');
+var fivePm = document.getElementById('5pm');
+
+
+
+
+
+
+
+//past present and now 
+var timeConverter = function(time){
+    var hour = Number(time[0]);
+    //debugger;
+    if(hour <= 8 ){
+        
+        console.log("before 9am")
+    }else if(hour === 9){
+        console.log("its 9am")
+        nineAm.classList.add("current");
+        tenAm.classList.add("future");
+        elevenAm.classList.add("future");
+        twelvePm.classList.add("future");
+        onePm.classList.add("future");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 10){
+        console.log("its 10am")
+        nineAm.classList.add("past");
+        tenAm.classList.add("current");
+        elevenAm.classList.add("future");
+        twelvePm.classList.add("future");
+        onePm.classList.add("future");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 11){
+        console.log("its 11am")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("current");
+        twelvePm.classList.add("future");
+        onePm.classList.add("future");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 12){
+        console.log("its 12pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("current");
+        onePm.classList.add("future");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 13){
+        console.log("its 1pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("current");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 14){
+        console.log("its 2pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("past");
+        twoPm.classList.add("current");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 15){
+        console.log("its 5pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("past");
+        twoPm.classList.add("past");
+        threePm.classList.add("current");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
+    }else if(hour === 16){
+        console.log("its 5pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("past");
+        twoPm.classList.add("past");
+        threePm.classList.add("past");
+        fourPm.classList.add("past");
+        fivePm.classList.add("current");
+    }else if(hour === 17){
+        console.log("its 5pm")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("past");
+        twoPm.classList.add("past");
+        threePm.classList.add("past");
+        fourPm.classList.add("past");
+        fivePm.classList.add("present");
+    }
+};
+
+
 var updateTime = function(){
 //fetch the time
  fetch(timeApi)
@@ -64,8 +191,9 @@ var updateTime = function(){
      var arrayTime = dayTime[0].split('T');
      var date = arrayTime[0].split('-');
      var time = arrayTime[1].split(':');
-     console.log(date);
+     console.log(time);
      displayDate(date);
+     timeConverter(time);
  });
 };
 
