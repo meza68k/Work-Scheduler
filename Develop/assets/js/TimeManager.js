@@ -72,11 +72,19 @@ var timeConverter = function(time){
     var hour = Number(time[0]);
     //debugger;
     if(hour <= 8 ){
-        
-        console.log("before 9am")
+        console.log("before opening");
+        nineAm.classList.add("future");
+        tenAm.classList.add("future");
+        elevenAm.classList.add("future");
+        twelvePm.classList.add("future");
+        onePm.classList.add("future");
+        twoPm.classList.add("future");
+        threePm.classList.add("future");
+        fourPm.classList.add("future");
+        fivePm.classList.add("future");
     }else if(hour === 9){
         console.log("its 9am")
-        nineAm.classList.add("current");
+        nineAm.classList.add("present");
         tenAm.classList.add("future");
         elevenAm.classList.add("future");
         twelvePm.classList.add("future");
@@ -88,7 +96,7 @@ var timeConverter = function(time){
     }else if(hour === 10){
         console.log("its 10am")
         nineAm.classList.add("past");
-        tenAm.classList.add("current");
+        tenAm.classList.add("present");
         elevenAm.classList.add("future");
         twelvePm.classList.add("future");
         onePm.classList.add("future");
@@ -100,7 +108,7 @@ var timeConverter = function(time){
         console.log("its 11am")
         nineAm.classList.add("past");
         tenAm.classList.add("past");
-        elevenAm.classList.add("current");
+        elevenAm.classList.add("present");
         twelvePm.classList.add("future");
         onePm.classList.add("future");
         twoPm.classList.add("future");
@@ -112,7 +120,7 @@ var timeConverter = function(time){
         nineAm.classList.add("past");
         tenAm.classList.add("past");
         elevenAm.classList.add("past");
-        twelvePm.classList.add("current");
+        twelvePm.classList.add("present");
         onePm.classList.add("future");
         twoPm.classList.add("future");
         threePm.classList.add("future");
@@ -124,7 +132,7 @@ var timeConverter = function(time){
         tenAm.classList.add("past");
         elevenAm.classList.add("past");
         twelvePm.classList.add("past");
-        onePm.classList.add("current");
+        onePm.classList.add("present");
         twoPm.classList.add("future");
         threePm.classList.add("future");
         fourPm.classList.add("future");
@@ -136,7 +144,7 @@ var timeConverter = function(time){
         elevenAm.classList.add("past");
         twelvePm.classList.add("past");
         onePm.classList.add("past");
-        twoPm.classList.add("current");
+        twoPm.classList.add("present");
         threePm.classList.add("future");
         fourPm.classList.add("future");
         fivePm.classList.add("future");
@@ -148,7 +156,7 @@ var timeConverter = function(time){
         twelvePm.classList.add("past");
         onePm.classList.add("past");
         twoPm.classList.add("past");
-        threePm.classList.add("current");
+        threePm.classList.add("present");
         fourPm.classList.add("future");
         fivePm.classList.add("future");
     }else if(hour === 16){
@@ -161,7 +169,7 @@ var timeConverter = function(time){
         twoPm.classList.add("past");
         threePm.classList.add("past");
         fourPm.classList.add("past");
-        fivePm.classList.add("current");
+        fivePm.classList.add("present");
     }else if(hour === 17){
         console.log("its 5pm")
         nineAm.classList.add("past");
@@ -173,6 +181,17 @@ var timeConverter = function(time){
         threePm.classList.add("past");
         fourPm.classList.add("past");
         fivePm.classList.add("present");
+    }else if(hour > 17){
+        console.log("its past time")
+        nineAm.classList.add("past");
+        tenAm.classList.add("past");
+        elevenAm.classList.add("past");
+        twelvePm.classList.add("past");
+        onePm.classList.add("past");
+        twoPm.classList.add("past");
+        threePm.classList.add("past");
+        fourPm.classList.add("past");
+        fivePm.classList.add("past");
     }
 };
 

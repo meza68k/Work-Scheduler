@@ -37,7 +37,7 @@
         <p class="description " id="tB1">
           <input type="text" name="textbox" id="9am">
         </p>
-        <button onclick="copyPasteStore('9am', 'tB1');" id="btn1" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('9am', 'tB1');" id="btn1" class="saveBtn" ><img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('9am');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -47,7 +47,7 @@
         <p class="description " id="tB2">
           <input type="text" name="textbox" id="10am">
         </p>
-        <button onclick="copyPasteStore('10am', 'tB2');" id="btn2" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('10am', 'tB2');" id="btn2" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('10am');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -57,7 +57,7 @@
         <p class="description " id="tB3">
           <input type="text" name="textbox" id="11am">
         </p>
-        <button onclick="copyPasteStore('11am', 'tB3');" id="btn3" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('11am', 'tB3');" id="btn3" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('11am');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -67,7 +67,7 @@
         <p class="description "id="tB4">
           <input type="text" name="textbox" id="12pm">
         </p>
-        <button onclick="copyPasteStore('12pm', 'tB4');" id="btn4" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('12pm', 'tB4');" id="btn4" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('12pm');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -77,7 +77,7 @@
         <p class="description " id="tB5">
           <input type="text" name="textbox" id="1pm">
         </p>
-        <button onclick="copyPasteStore('1pm', 'tB5');" id="btn5" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('1pm', 'tB5');" id="btn5" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('1pm');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -87,7 +87,7 @@
         <p class="description " id="tB6">
           <input type="text" name="textbox" id="2pm">
         </p>
-        <button onclick="copyPasteStore('2pm', 'tB6');" id="btn6" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('2pm', 'tB6');" id="btn6" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('2pm');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -97,7 +97,7 @@
         <p class="description " id="tB7">
           <input type="text" name="textbox" id="3pm">
         </p>
-        <button onclick="copyPasteStore('3pm', 'tB7');" id="btn7" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('3pm', 'tB7');" id="btn7" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('3pm');" id="clearBtn" class="clearBtn" > Clear </button>
       </div>
       <div class="row ">
@@ -107,7 +107,7 @@
         <p class="description " id="tB8">
           <input type="text" name="textbox" id="4pm">
         </p>
-        <button onclick="copyPasteStore('4pm', 'tB8');" id="btn8" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('4pm', 'tB8');" id="btn8" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('4pm');" id="clearBtn" class="clearBtn" > Clear </button>
       </div> <div class="row ">
         <div class="hour">
@@ -116,7 +116,7 @@
         <p class="description" id="tB9">
           <input type="text" name="textbox" id="5pm">
         </p>
-        <button onclick="copyPasteStore('5pm', 'tB9');" id="btn9" class="saveBtn" > save </button>
+        <button onclick="copyPasteStore('5pm', 'tB9');" id="btn9" class="saveBtn" > <img class="img1" src="./assets/images/lilDisk.jpg"> </button>
         <button onclick="clearBox('5pm');" id="clearBtn" class="clearBtn" > Clear </button>
     
       
@@ -127,10 +127,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/TimeManager.js"></script>
     <script src="./assets/js/storage.js"></script>
-    <footer>
-      <p>
-        this is the footer
-      </p>
-    </footer>
+    
   </body>
+  <footer>
+      <p class="footer">
+        <span>
+          Grey-Past Event,
+        </span>
+        <span>
+          Red-Current Event,
+        </span>
+        <span>
+          Green-Future Event.
+        </span>
+      </p>
+  </footer>
 </html>
